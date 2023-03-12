@@ -1,0 +1,8 @@
+.about{
+  margin: 0 100px; 
+}
+@media screen and (width <= 768px){
+  .about{
+    margin: 0 20px;
+  }
+}

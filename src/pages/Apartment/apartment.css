@@ -1,0 +1,25 @@
+.ApartmentPage{
+  color: #FF6060;
+  margin-inline: 100px;
+}
+
+.infoGenerales{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.descriptionApartment{
+  display: flex;
+  flex-direction: column;
+}
+
+.descriptionproprio{
+  display: flex;
+  flex-direction: column;
+}
+.infoProprio{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}

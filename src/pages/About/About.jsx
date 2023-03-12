@@ -1,15 +1,12 @@
 import React from 'react'
-import Navbar from '../../components/Navbar'
-import Footer from '../../components/Footer'
+import Banner from '../../components/Banner'
+import './About.css'
 
 function About() {
   return (
-    <div>
-      <Navbar />
-      <div>
-A propos
-      </div>
-      <Footer />
+    <div className='about'>
+      <Banner />
+      <div>A propos</div>
     </div>
   )
 }
