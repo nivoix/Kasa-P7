@@ -1,0 +1,21 @@
+.footer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 209px;
+  border: 2px solid red;
+  background:  #060606;
+  color: white;
+  padding-top: 50px;
+  gap:18px;
+}
+
+.imageFooter{
+  width: 122px;
+  height: 40px;
+}
+
+.textFooter{
+  font-size: 24px;
+}

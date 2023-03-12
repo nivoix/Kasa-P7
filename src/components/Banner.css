@@ -1,0 +1,23 @@
+.banner{
+  position: relative;
+  display: flex;
+  height: 223px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 43px;
+}
+
+.imgbanner{
+  object-fit: cover;
+  width: 1222px;
+  height: 223px;
+  border-radius: 25px;
+  filter: brightness(60%);
+}
+
+.tittlebanner{
+  position: absolute;
+  color: #FFFFFF;
+  font-size: 48px;
+  font-weight: 500;
+}

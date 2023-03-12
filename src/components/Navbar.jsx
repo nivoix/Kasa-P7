@@ -1,6 +1,7 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import"./Navbar.css"
+
 
 function Navbar() {
   return (
@@ -9,8 +10,8 @@ function Navbar() {
         <img src="/assets/logonavbar.svg" alt='logo'></img>
       </div>
       <div className='navbar__link'>
-        <Link to="/">Accueil</Link>
-        <Link to="/about">A propos</Link>
+        <NavLink to="/">Accueil</NavLink>
+        <NavLink to="/about">A propos</NavLink>
       </div>
     </nav>
   )

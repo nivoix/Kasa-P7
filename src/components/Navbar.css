@@ -1,11 +1,26 @@
 .navbar{
   display: flex;
   justify-content: space-between;
-}
+  align-items: center;
+  margin-bottom: 70px;
+  margin-top: 40px;
+  }
 
 .navbar__link{
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   gap: 2em;
+}
+.navbar__link a{
+  color: #FF6060;
+  text-decoration: none;
+  font-size: 24px;
+  font-weight: 500;
+}
+.navbar__link a:hover{
+  text-decoration: underline;
+}
+.navbar__link a.active{
+  text-decoration: underline;
 }

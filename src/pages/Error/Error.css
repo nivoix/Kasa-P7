@@ -1,0 +1,28 @@
+.error{
+  margin: 0 100px; 
+}
+@media screen and (width <= 768px){
+  .error{
+    margin: 0 20px;
+  }
+}
+
+.cardError{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+  margin-top: 140px;
+}
+
+.imageError{
+  Width:597px;
+  Height: 263px; 
+}
+
+.textError{
+  color:  #FF6060;
+  font-weight: 500;
+  font-size: 36px;
+}
