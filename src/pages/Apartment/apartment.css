@@ -2,24 +2,92 @@
   color: #FF6060;
   margin-inline: 100px;
 }
-
 .infoGenerales{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  margin-bottom: 24px
 }
-
 .descriptionApartment{
   display: flex;
   flex-direction: column;
+  width:70%;
 }
-
+.apartTitle{
+  font-size: 36px;
+  font-weight: 500;
+  margin:0
+}
+.apartCity{
+  font-size: 18px;
+  font-weight: 500;
+  margin:0;
+  margin-bottom:20px;
+}
+.apartTags{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 10px;
+}
+.tag{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #FF6060;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 500;
+  color:#FFF;
+  width: 115px;
+}
 .descriptionproprio{
   display: flex;
   flex-direction: column;
+  width:auto;
 }
 .infoProprio{
   display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 15px;
+}
+.nameproprio{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end
+}
+.nameproprio p{
+  margin:0;
+  margin-bottom: 5px;
+}
+.headProprio{
+  border-radius: 50%;
+  width: 64px;
+}
+.redStar{
+  color:#FF6060;
+}
+.infoSecondaires{
+  display: flex;
   flex-direction: row;
+  justify-content: space-between;
+}
+.descriptionApartmentCard{
+  width: 48%;
+}
+.equipementApartmentCard{
+  width: 48%;
+}
+.titleCard{
+  display: flex;
   align-items: center;
+  background-color: #FF6060;
+  height: 52px;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: 500;
+  color: #FFF;
+  padding-left: 20px;
 }

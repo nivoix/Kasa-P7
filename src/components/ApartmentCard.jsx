@@ -2,12 +2,12 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import './ApartmentCard.css'
 
-function ApartmentCard() {
+function ApartmentCard(props) {
   return (
     <div className='apartmentcard'>
-      <Link to="/apartment">
-        <img src="/" alt=""></img>
-        <h2 className='tittleApartmentCard'>Titre d'appartement</h2>
+      <Link to={`/apartment`} state= {props.id}>
+        <img src={props.imageURL} alt=""></img>
+        <h2 className='tittleApartmentCard'>{props.title}</h2>
       </Link>
     </div>
   )

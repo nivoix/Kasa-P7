@@ -25,3 +25,16 @@
 .navbar__link a.active{
   text-decoration: underline;
 }
+@media screen and (width <= 768px){
+  .navbar{
+    margin: 20px;
+  }
+  .navbar__link{
+    gap: 6px;
+  }
+}
+@media screen and (width <= 480px) {
+  .navbar{
+    flex-direction: column;
+  }
+}

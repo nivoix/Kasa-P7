@@ -1,11 +1,11 @@
 .bgapartmentgrid{
   background: #F7F7F7;
-    border-radius: 25px;
-    border: 1px solid red;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-evenly;
-    padding-top: 40px;
-    margin-bottom: 40px;
+  border-radius: 25px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding-top: 40px;
+  margin-bottom: 40px;
+  gap:15px;
 }
