@@ -1,0 +1,56 @@
+.apartmentCard{
+  position: relative;
+  width: 48%;
+}
+.titleCard{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #FF6060;
+  height: 52px;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: 500;
+  color: #FFF;
+  position: inherit;
+  padding-inline: 20px;
+  top: 10px;
+  cursor: pointer;
+}
+.textCard{
+  padding-left: 20px;
+  padding-top: 40px;
+  padding-right: 12px;
+  padding-bottom: 27px;
+  font-weight: 400;
+  font-size: 18px;
+  background-color: #F6F6F6;
+  border-radius: 10px 10px 0 0;
+}
+.textCard.is-novisible{
+  visibility: hidden;
+  position: absolute;
+  z-index: -1;
+}
+.textCard ul{
+  margin:0;
+  padding-left: 0;
+  padding-bottom: 5px;
+}
+@media screen and (width<=768px) {
+  .apartmentCard{
+    margin-bottom: 20px;
+    width: 100%;
+  }
+}
+.dropDown{
+  transform-origin : center center;
+  transform: rotate(180deg);
+  transition-duration: 1.2s;
+
+}
+/* .dropDown.dropUp{
+  transform-origin : center center;
+  transform: rotate(-180deg);
+  transition-duration: 1.2s;
+} */

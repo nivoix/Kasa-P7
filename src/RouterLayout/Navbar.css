@@ -30,7 +30,11 @@
     margin: 20px;
   }
   .navbar__link{
-    gap: 6px;
+    gap: 20px;
+    text-transform: uppercase;
+  }
+  .navbar__link a{
+    font-size: 12px;
   }
 }
 @media screen and (width <= 480px) {

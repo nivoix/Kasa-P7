@@ -29,6 +29,7 @@
   flex-direction: row;
   justify-content: flex-start;
   gap: 10px;
+  flex-wrap: wrap;
 }
 .tag{
   display: flex;
@@ -39,7 +40,8 @@
   font-size: 14px;
   font-weight: 500;
   color:#FFF;
-  width: 115px;
+  width: 140px;
+  height: 25px;
 }
 .descriptionproprio{
   display: flex;
@@ -73,21 +75,31 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  margin-bottom: 20px;
 }
-.descriptionApartmentCard{
-  width: 48%;
+@media screen and (width<=768px) {
+  .ApartmentPage{
+    margin-inline: 20px;
+  }
+  .infoGenerales{
+    flex-direction:column;
+  }
+  .descriptionApartment{
+    margin-bottom: 20px;
+    width: 100%;
+  }
+  .descriptionproprio{
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .infoSecondaires{
+    flex-direction: column;
+  }
 }
-.equipementApartmentCard{
-  width: 48%;
-}
-.titleCard{
-  display: flex;
-  align-items: center;
-  background-color: #FF6060;
-  height: 52px;
-  border-radius: 10px;
-  font-size: 18px;
-  font-weight: 500;
-  color: #FFF;
-  padding-left: 20px;
+@media screen and (width<=540px) {
+  .descriptionproprio{
+    flex-direction: column;
+    gap: 10px;
+  }
 }

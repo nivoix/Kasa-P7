@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useLocation } from 'react-router-dom'
+import ApartDetailsCard from '../../components/ApartDetailsCard'
 import CarouselBanner from '../../components/CarouselBanner'
 import './Apartment.css'
 
@@ -48,16 +49,14 @@ const name = selectedApart.host.name.split((" "))
               </div>
         </div>
         <div className='infoSecondaires'>
-            <div className='descriptionApartmentCard'>
-                  <div className='titleCard'>Description</div>
-                  <div>{selectedApart.description}</div>
-            </div>
-            <div className='equipementApartmentCard'>
-                  <div className='titleCard'>Equipements
-                    <span className='dropDown'><img src="/assets/dropdown.png" alt="dropdown"/></span>
-                  </div>
-                  <div>{selectedApart.equipments.map((equip ,index) => <span key={index}>{equip}</span>)}</div>
-            </div>
+            <ApartDetailsCard 
+              title="Description" 
+              description={selectedApart.description}
+            />
+            <ApartDetailsCard 
+              title="Equipements" 
+              description={selectedApart.equipments.map((equip ,index) => <ul key={index}>{equip}</ul>)}
+            />
         </div>
       </div>
     </>
