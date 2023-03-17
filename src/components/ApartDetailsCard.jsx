@@ -11,14 +11,12 @@ function ApartDetailsCard(props) {
   const textCardClass = isnovisible ? ".is-novisible" : ""
   const rotate = isnovisible ? ".dropUp" : ""
   return (
-    <>
       <div className='apartmentCard'>
-                  <div className='titleCard'onClick={showCard}>{props.title}
-                  <span><img className={`dropDown${rotate}`} src="/assets/dropdown.png"  alt="dropdown"/></span>
-                  </div>
-                  <div className={`textCard${textCardClass}`} >{isnovisible? "" : props.description}</div>
-            </div>
-    </>
+          <div className='titleCard'onClick={showCard}>{props.title}
+          <span><img className={`dropDown${rotate}`} src="/assets/dropdown.png"  alt="dropdown"/></span>
+          </div>
+          <div className={`textCard${textCardClass}`} >{isnovisible? "" : props.description}</div>
+      </div>
   )
 }
 

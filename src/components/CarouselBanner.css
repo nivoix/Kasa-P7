@@ -1,0 +1,43 @@
+.carouselCard{
+  position: relative;
+  height: 415px;
+}
+.dropleft{
+  position: absolute;
+  top: 35%;
+  cursor: pointer;
+  left: 1%;
+  height: 25%;
+}
+.dropright{
+  position: absolute;
+  top: 35%;
+  cursor: pointer;
+  left: 92%;
+  height: 25%;
+}
+/* .carouselImage{
+  width: 100%;
+  height: 100%;
+} */
+.carouselImage img{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 25px;
+  z-index: -1;
+  opacity: 0;
+}
+
+.carouselImage img.show {
+  opacity: 1;
+}
+.counterimage{
+  position: absolute;
+  font-size: 26px;
+  font-weight: 500;
+  top: 80%;
+  left: 50%;
+  color: #FFFFFF;
+}
