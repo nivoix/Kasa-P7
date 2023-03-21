@@ -1,8 +1,25 @@
 .about{
-  margin: 0 100px; 
+  margin: 0 100px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 @media screen and (width <= 768px){
   .about{
     margin: 0 20px;
+  }
+}
+.groupCard{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 83%;
+  margin: 0;
+  margin-bottom: 40px;
+  gap: 5%;
+}
+@media screen and (width <= 480px) {
+  .groupCard{
+    width: 100%;
   }
 }

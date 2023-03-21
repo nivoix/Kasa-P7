@@ -1,25 +1,20 @@
 .carouselCard{
   position: relative;
   height: 415px;
+  margin-bottom: 24px;
 }
-.dropleft{
+.drop{
   position: absolute;
   top: 35%;
   cursor: pointer;
+  height: 25%;
+}
+.left{
   left: 1%;
-  height: 25%;
 }
-.dropright{
-  position: absolute;
-  top: 35%;
-  cursor: pointer;
+.right{
   left: 92%;
-  height: 25%;
 }
-/* .carouselImage{
-  width: 100%;
-  height: 100%;
-} */
 .carouselImage img{
   position: absolute;
   width: 100%;
@@ -28,6 +23,8 @@
   border-radius: 25px;
   z-index: -1;
   opacity: 0;
+  transition-property: opacity;
+  transition-duration: 0.4s;
 }
 
 .carouselImage img.show {

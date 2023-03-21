@@ -74,8 +74,9 @@
 .infoSecondaires{
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
   margin-bottom: 20px;
+  justify-content: space-around;
+  gap: 3%;
 }
 @media screen and (width<=768px) {
   .ApartmentPage{

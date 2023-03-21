@@ -9,30 +9,37 @@ function CarouselBanner(props) {
     if(i === currentPicture) return "show"
   }
 
+  const showArrow = () => {
+    return images.length !== 1
+  }
+  
   const next = () => {
-    setcurrentPicture((currentPicture + 1) % images.length)
+    const isLastSlide = currentPicture === images.length - 1
+    const newIndex = isLastSlide ? 0 : currentPicture + 1
+    setcurrentPicture(newIndex)
   }
 
   const previous = () => {
-    const newCurrentPicture = currentPicture -1
-    if(newCurrentPicture < 0) {
-      setcurrentPicture(images.length - 1)
-    }else {
-      setcurrentPicture((currentPicture - 1))
-    }
+    const isFirstSlide = currentPicture === 0
+    const newIndex = isFirstSlide ? images.length -1 : currentPicture -1
+    setcurrentPicture(newIndex)
   }
 
 if(!images) return <div>Loading...</div>
   return (
     <div className='carouselCard'>
-      <img className='dropleft' src='./assets/dropleft.png' alt='drop' onClick={previous}></img>
       <div className='carouselImage'>
-          {images.map((image, i) => (
-              <img src={image} key={i} alt="" className={getClassName(i)}/>
-          ))} 
-      </div> 
-      <img className='dropright' src='./assets/dropright.png' alt='drop' onClick={next}></img>
+        {
+          images.map((image, i) => (
+            <img src={image} key={i} alt="" className={getClassName(i)}/>
+        ))}
+      </div>
+      {showArrow() && <>
+      <img className='drop left' src='./assets/dropleft.png' alt='drop' onClick={previous}></img>
+      <img className='drop right' src='./assets/dropright.png' alt='drop' onClick={next}></img>
       <p className='counterimage'>{currentPicture + 1}/{images.length}</p>
+      </>
+      }
     </div>
   )
 }
