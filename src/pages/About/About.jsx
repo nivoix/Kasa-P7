@@ -1,5 +1,5 @@
 import React from 'react'
-import Banner from '../../RouterLayout/Banner'
+import Banner from '../../components/Banner'
 import ApartDetailsCard from '../../components/ApartDetailsCard'
 import './About.css'
 import '../../components/ApartDetailsCard.css'
@@ -11,7 +11,7 @@ const descripSecurite = "La sécurité est la priorité de Kasa. Aussi bien pour
 
 function About() {
   return (
-    <div className='about'>
+    <main className='about'>
       <Banner imageURL='/assets/imgBannerAbout.png' />
       <div className='groupCard'>
       <ApartDetailsCard title="Fiabilité" description={descripFiabilite}/>
@@ -19,7 +19,7 @@ function About() {
       <ApartDetailsCard title="Service" description={descripService}/>
       <ApartDetailsCard title="Sécurité" description={descripSecurite}/>
       </div>
-    </div>
+    </main>
   )
 }
 

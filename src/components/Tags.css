@@ -1,0 +1,19 @@
+.apartTags{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.tag{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #FF6060;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 500;
+  color:#FFF;
+  width: 140px;
+  height: 25px;
+}

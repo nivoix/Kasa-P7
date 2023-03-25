@@ -4,11 +4,10 @@ import './ApartDetailsCard.css'
 function ApartDetailsCard(props) {
   const [isvisible, setisvisible] = useState(true)
 
-  
   const showCard = () => {
     setisvisible(!isvisible)
   }
-  const textCardClass = isvisible ?  ".isnovisible" : "textCard"
+  const textCardClass = isvisible ?  "isnovisible" : "textCard"
   const rotate = isvisible ?  "dropDown" : "dropUp"
   return (
       <div className='apartmentCard'>

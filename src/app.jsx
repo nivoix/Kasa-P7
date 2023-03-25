@@ -1,9 +1,9 @@
 import React from 'react'
-import Navbar from './RouterLayout/Navbar'
-import Footer from './RouterLayout/Footer'
+import Navbar from './Layout/Navbar'
+import Footer from './Layout/Footer'
 import { Outlet} from "react-router-dom";
 
-  const RouterLayout = () => {
+  const Layout = () => {
   return (
     <>
     <Navbar />
@@ -15,4 +15,4 @@ import { Outlet} from "react-router-dom";
 
 
 
-export default RouterLayout
+export default Layout

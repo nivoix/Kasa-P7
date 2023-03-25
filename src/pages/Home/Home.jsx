@@ -1,16 +1,16 @@
 import React from 'react'
-import Banner from '../../RouterLayout/Banner'
+import Banner from '../../components/Banner'
 import ApartmentGrid from '../../components/ApartmentGrid'
 import "./Home.css"
 
 function home() {
   return (
-    <div>
-      <div className='home'>
+    <>
+      <main className='home'>
         <Banner imageURL='/assets/imgBanner.png' title='Chez vous, partout et ailleurs'/>
         <ApartmentGrid />
-      </div>
-    </div>
+      </main>
+    </>
   )
 }
 

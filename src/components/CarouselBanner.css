@@ -13,7 +13,7 @@
   left: 1%;
 }
 .right{
-  left: 92%;
+  right: 1%;
 }
 .carouselImage img{
   position: absolute;
@@ -37,4 +37,10 @@
   top: 80%;
   left: 50%;
   color: #FFFFFF;
+}
+@media screen and (width<768px) {
+  .drop{
+    height: 18%;
+  }
+  
 }

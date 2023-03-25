@@ -44,3 +44,12 @@
     height: 255px;
   }
 }
+@media screen and (width>1440px) {
+  .apartmentcard{
+    width: 30%;
+    align-items: center;
+  }
+  .apartmentcard a{
+    width: 100%;
+  }
+}

@@ -1,6 +1,7 @@
 .ApartmentPage{
   color: #FF6060;
   margin-inline: 100px;
+  margin-bottom: 60px;
 }
 .infoGenerales{
   display: flex;
@@ -23,25 +24,6 @@
   font-weight: 500;
   margin:0;
   margin-bottom:20px;
-}
-.apartTags{
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  gap: 10px;
-  flex-wrap: wrap;
-}
-.tag{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #FF6060;
-  border-radius: 10px;
-  font-size: 14px;
-  font-weight: 500;
-  color:#FFF;
-  width: 140px;
-  height: 25px;
 }
 .descriptionproprio{
   display: flex;
@@ -67,9 +49,6 @@
 .headProprio{
   border-radius: 50%;
   width: 64px;
-}
-.redStar{
-  color:#FF6060;
 }
 .infoSecondaires{
   display: flex;

@@ -4,10 +4,6 @@ import './CarouselBanner.css'
 function CarouselBanner(props) {
   const images = props.pictures
   const[currentPicture, setcurrentPicture]= useState(0)
-  
-  const getClassName = (i) => {
-    if(i === currentPicture) return "show"
-  }
 
   const showArrow = () => {
     return images.length !== 1
@@ -31,7 +27,7 @@ if(!images) return <div>Loading...</div>
       <div className='carouselImage'>
         {
           images.map((image, i) => (
-            <img src={image} key={i} alt="" className={getClassName(i)}/>
+            <img src={image} key={i} alt="" className={i === currentPicture ? 'show' : ''}/>
         ))}
       </div>
       {showArrow() && <>
