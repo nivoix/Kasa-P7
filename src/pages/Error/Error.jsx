@@ -16,7 +16,7 @@ function Error() {
     <>
       <div className='error'>
         <div className='cardError'>
-          <img className='imgageError' src="./assets/404.png" alt="404"/>
+          <img className='imgageError' src="/assets/404.png" alt="404"/>
           <div className='textError'>Oups! La page que vous demandez n'existe pas.</div>
         <StyledLink to="/">Retourner sur la page d'accueil</StyledLink>
         </div>

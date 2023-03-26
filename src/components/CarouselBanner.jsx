@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import './CarouselBanner.css'
+import Loader from './Loader'
 
 function CarouselBanner(props) {
   const images = props.pictures
@@ -21,8 +22,8 @@ function CarouselBanner(props) {
     setcurrentPicture(newIndex)
   }
 
-if(!images) return <div>Loading...</div>
-  return (
+//if(!images) return <div>Loading...</div>
+  return images ? (
     <div className='carouselCard'>
       <div className='carouselImage'>
         {
@@ -31,13 +32,13 @@ if(!images) return <div>Loading...</div>
         ))}
       </div>
       {showArrow() && <>
-      <img className='drop left' src='./assets/dropleft.png' alt='drop' onClick={previous}></img>
-      <img className='drop right' src='./assets/dropright.png' alt='drop' onClick={next}></img>
+      <img className='drop left' src="/assets/dropleft.png" alt='drop' onClick={previous}></img>
+      <img className='drop right' src="/assets/dropright.png" alt='drop' onClick={next}></img>
       <p className='counterimage'>{currentPicture + 1}/{images.length}</p>
       </>
       }
     </div>
-  )
+  ) : (<Loader />)
 }
 
 export default CarouselBanner

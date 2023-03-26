@@ -1,35 +1,35 @@
 import React, { useEffect, useState } from 'react'
-import { useLocation } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
 import ApartDetailsCard from '../../components/ApartDetailsCard'
 import CarouselBanner from '../../components/CarouselBanner'
 import Tags from '../../components/Tags'
 import Stars from '../../components/Stars'
+import Loader from '../../components/Loader'
+import Error from '../../pages/Error/Error'
 import './Apartment.css'
 
 function Apartment() {
-  const  aptId  = useLocation()
+  const aptId   = useParams()
   const [selectedApart, setselectedApart] = useState()
-console.log(aptId)
+  const [nofound, setnofound] = useState(false)
 
-  useEffect (ApptDatas, [aptId.state]);
+  useEffect (ApptDatas, [aptId.id]);
   
   function ApptDatas () {
-    fetch("db.json")
+    fetch("/db.json")
       .then((res) => res.json())
       .then((apts) => {
-        const apartmentSelected = apts.find(apt => apt.id === aptId.state)
-        setselectedApart(apartmentSelected)
+        const apartmentSelected = apts.find(apt => apt.id === aptId.id)
+        apartmentSelected ? (setselectedApart(apartmentSelected)) : (setnofound(true))
       })
-      .catch(console.error)
+      .catch((error) => {
+        console.log(error);
+        setnofound(true)
+      })
   }
+if (nofound) return <Error />
 
-//loading pour attendre selectedApart
-if(!selectedApart) return <div>Loading...</div>
-
-//spliter le nom de l'auteur pour avoir nom et prénom
-const name = selectedApart.host.name.split((" "))
-
-  return (
+return selectedApart ? (
     <> 
       <main className='ApartmentPage'>
         <CarouselBanner pictures= {selectedApart.pictures}/>
@@ -42,8 +42,8 @@ const name = selectedApart.host.name.split((" "))
               <div className='descriptionproprio'>
                     <div className='infoProprio'>
                           <div className='nameproprio'>
-                              <p>{name[0]}</p>
-                              <p>{name[1]}</p>
+                              <p>{selectedApart.host.name.split((" "))[0]}</p>
+                              <p>{selectedApart.host.name.split((" "))[1]}</p>
                           </div>
                           <img className='headProprio' src={selectedApart.host.picture} alt="portrait" />
                     </div>
@@ -62,7 +62,7 @@ const name = selectedApart.host.name.split((" "))
         </div>
       </main>
     </>
-  )
+  ) : (<Loader />)
 }
 
 export default Apartment
