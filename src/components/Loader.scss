@@ -1,3 +1,5 @@
+@import "../styles/variables";
+
 .loader {
   display: flex;
   justify-content: center;
@@ -14,8 +16,8 @@
   height: 100px;
   margin: 8px;
   border-radius: 50%;
-  border: 6px solid #FF6060;
-  border-color: #FF6060 transparent #FF6060 transparent;
+  border: 6px solid $primary-color;
+  border-color: $primary-color transparent $primary-color transparent;
   animation: rotation 1.2s linear infinite;
 }
 @keyframes rotation {

@@ -1,3 +1,5 @@
+@import "../styles/variables";
+
 .carouselCard{
   position: relative;
   height: 415px;
@@ -36,11 +38,10 @@
   font-weight: 500;
   top: 80%;
   left: 50%;
-  color: #FFFFFF;
+  color: $secondary-color;
 }
-@media screen and (width<768px) {
+@media screen and (width < $screen-tablet) {
   .drop{
     height: 18%;
   }
-  
 }

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import ApartmentCard from './ApartmentCard'
 import Error from '../pages/Error/Error'
 import Loader from './Loader'
-import './ApartmentGrid.css'
+import './ApartmentGrid.scss'
 
 function ApartmentGrid() {
   const [dataAppts, setdataAppts] = useState ([]);
@@ -22,7 +22,6 @@ function ApartmentGrid() {
       })
   }
   if(nofound) return <Error />
-console.log(dataAppts);
   return  (
     <>
     { dataAppts.length < 1 && <Loader /> }

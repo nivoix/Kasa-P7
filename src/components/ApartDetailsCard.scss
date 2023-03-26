@@ -1,3 +1,5 @@
+@import "../styles/variables";
+
 .apartmentCard{
   position: relative;
   width: -webkit-fill-available;
@@ -6,12 +8,12 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #FF6060;
+  background-color: $primary-color;
   height: 52px;
   border-radius: 10px;
   font-size: 18px;
   font-weight: 500;
-  color: #FFF;
+  color: $secondary-color;
   position: inherit;
   padding-inline: 20px;
   top: 10px;
@@ -19,14 +21,14 @@
   margin-top: 20px;
 }
 .textCard{
-  color: #FF6060;
+  color: $primary-color;
   padding-left: 20px;
   padding-top: 40px;
   padding-right: 12px;
   padding-bottom: 27px;
   font-weight: 400;
   font-size: 18px;
-  background-color: #F6F6F6;
+  background-color: $tertiary-color;
   border-radius: 10px 10px 0 0;
 }
 .textCard.isnovisible{
@@ -39,7 +41,7 @@
   padding-left: 0;
   padding-bottom: 5px;
 }
-@media screen and (width<=768px) {
+@media screen and (width <= $screen-tablet) {
   .apartmentCard{
     margin-bottom: 20px;
     width: 100%;

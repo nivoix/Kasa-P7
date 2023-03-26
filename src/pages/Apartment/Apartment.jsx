@@ -6,7 +6,7 @@ import Tags from '../../components/Tags'
 import Stars from '../../components/Stars'
 import Loader from '../../components/Loader'
 import Error from '../../pages/Error/Error'
-import './Apartment.css'
+import './Apartment.scss'
 
 function Apartment() {
   const aptId   = useParams()

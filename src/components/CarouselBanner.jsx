@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
-import './CarouselBanner.css'
+import './CarouselBanner.scss'
 import Loader from './Loader'
+import dropleft from '../assets/images/dropleft.png'
+import dropright from '../assets/images/dropright.png'
 
 function CarouselBanner(props) {
   const images = props.pictures
@@ -32,8 +34,8 @@ function CarouselBanner(props) {
         ))}
       </div>
       {showArrow() && <>
-      <img className='drop left' src="/assets/dropleft.png" alt='drop' onClick={previous}></img>
-      <img className='drop right' src="/assets/dropright.png" alt='drop' onClick={next}></img>
+      <img className='drop left' src={dropleft} alt='drop' onClick={previous}></img>
+      <img className='drop right' src={dropright} alt='drop' onClick={next}></img>
       <p className='counterimage'>{currentPicture + 1}/{images.length}</p>
       </>
       }

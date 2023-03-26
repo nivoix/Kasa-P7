@@ -1,3 +1,5 @@
+@import "../styles/variables";
+
 .footer{
   display: flex;
   flex-direction: column;
@@ -5,7 +7,7 @@
   justify-content: center;
   height: 209px;
   background:  #060606;
-  color: white;
+  color: $secondary-color;
   padding-top: 50px;
   gap:18px;
 }

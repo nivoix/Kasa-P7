@@ -1,12 +1,14 @@
+@import "../../styles/variables";
+
 .about{
   margin: 0 100px 40px 100px;
   display: flex;
   align-items: center;
   flex-direction: column;
 }
-@media screen and (width <= 768px){
+@media screen and (width <= $screen-tablet){
   .about{
-    margin: 0 20px;
+    margin: $margin-screen-tablet;
   }
 }
 .groupCard{
@@ -18,7 +20,7 @@
   margin-bottom: 40px;
   gap: 5%;
 }
-@media screen and (width <= 480px) {
+@media screen and (width <= $screen-mobile) {
   .groupCard{
     width: 100%;
   }

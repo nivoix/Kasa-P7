@@ -1,3 +1,5 @@
+@import "../styles/variables";
+
 .apartmentcard{
   display: flex;
   flex-direction: column-reverse;
@@ -23,12 +25,12 @@
   top: 80%;
   left: 17px;
   max-width: 70%;
-  color: white;
+  color: $secondary-color;
   font-weight: 500;
   font-size: 18px;
   z-index: 1;
 }
-@media screen and (width <= 480px) {
+@media screen and (width <= $screen-mobile) {
   .apartmentcard a{
     width: 250px;
     height: 250px;
@@ -38,7 +40,7 @@
     max-width: 92%;
   }
 }
-@media screen and (width>481px) and (width <= 768px) {
+@media screen and (width > $screen-mobile) and (width <= $screen-tablet) {
   .apartmentcard a{
     width: 335px;
     height: 255px;

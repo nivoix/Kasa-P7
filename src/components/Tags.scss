@@ -1,3 +1,5 @@
+@import "../styles/variables";
+
 .apartTags{
   display: flex;
   flex-direction: row;
@@ -9,11 +11,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #FF6060;
+  background-color: $primary-color;
   border-radius: 10px;
   font-size: 14px;
   font-weight: 500;
-  color:#FFF;
+  color:$secondary-color;
   width: 140px;
   height: 25px;
 }

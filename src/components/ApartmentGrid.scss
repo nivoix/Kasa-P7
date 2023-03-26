@@ -1,5 +1,7 @@
+@import "../styles/variables";
+
 .bgapartmentgrid{
-  background: #F7F7F7;
+  background: $tertiary-color;
   border-radius: 25px;
   display: flex;
   flex-wrap: wrap;

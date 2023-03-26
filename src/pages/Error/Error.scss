@@ -1,9 +1,11 @@
+@import "../../styles/variables";
+
 .error{
   margin: 0 100px; 
 }
-@media screen and (width <= 768px){
+@media screen and (width <= #{$screen-tablet}){
   .error{
-    margin: 0 20px;
+    margin: $margin-screen-tablet;
   }
 }
 
@@ -17,12 +19,12 @@
 }
 
 .imageError{
-  Width:597px;
-  Height: 263px; 
+  width: 597px;
+  height: 263px; 
 }
 
 .textError{
-  color:  #FF6060;
+  color:  $primary-color;
   font-weight: 500;
   font-size: 36px;
 }

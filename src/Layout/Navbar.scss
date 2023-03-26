@@ -1,3 +1,5 @@
+@import "../styles/variables";
+
 .navbar{
   display: flex;
   justify-content: space-between;
@@ -14,7 +16,7 @@
   gap: 2em;
 }
 .navbar__link a{
-  color: #FF6060;
+  color: $primary-color;
   text-decoration: none;
   font-size: 24px;
   font-weight: 500;
@@ -25,7 +27,7 @@
 .navbar__link a.active{
   text-decoration: underline;
 }
-@media screen and (width <= 768px){
+@media screen and (width <= $screen-tablet){
   .navbar{
     margin: 20px;
   }
@@ -37,7 +39,7 @@
     font-size: 12px;
   }
 }
-@media screen and (width <= 480px) {
+@media screen and (width <= $screen-mobile) {
   .navbar{
     flex-direction: column;
   }

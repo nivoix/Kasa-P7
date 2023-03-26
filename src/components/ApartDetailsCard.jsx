@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
-import './ApartDetailsCard.css'
+import './ApartDetailsCard.scss'
+import dropdown from '../assets/images/dropdown.png'
 
 function ApartDetailsCard(props) {
   const [isvisible, setisvisible] = useState(true)
@@ -12,7 +13,7 @@ function ApartDetailsCard(props) {
   return (
       <div className='apartmentCard'>
           <div className='titleCard'onClick={showCard}>{props.title}
-          <span><img className={rotate} src="/assets/dropdown.png"  alt="dropdown"/></span>
+          <span><img className={rotate} src={dropdown}  alt="dropdown"/></span>
           </div>
           <div className={textCardClass} >{isvisible? "" : props.description}</div>
       </div>

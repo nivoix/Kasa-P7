@@ -1,3 +1,5 @@
+@import "../../styles/variables";
+
 body{
   margin: 0 ;
   padding: 0;
@@ -7,8 +9,8 @@ body{
 .home{
   margin: 0 100px; 
 }
-@media screen and (width <= 768px){
+@media screen and (width <= $screen-tablet){
   .home{
-    margin: 0 20px;
+    margin: $margin-screen-tablet;
   }
 }

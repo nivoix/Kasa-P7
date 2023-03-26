@@ -1,8 +1,9 @@
 import React from 'react'
 import Banner from '../../components/Banner'
 import ApartDetailsCard from '../../components/ApartDetailsCard'
-import './About.css'
-import '../../components/ApartDetailsCard.css'
+import './About.scss'
+import '../../components/ApartDetailsCard.scss'
+import imgbannerabout from '../../assets/images/imgBannerAbout.png'
 
 const descripFiabilite = "Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements, et toutes les informations sont régulièrement vérifiées par nos équipes."
 const descripRespect = "La bienveillance fait parti des valeurs fondatrices de Kasa; Tout comportement discriminatoire ou de perturbation du voisinage entrainera une exclusion de notre plateforme."
@@ -12,7 +13,7 @@ const descripSecurite = "La sécurité est la priorité de Kasa. Aussi bien pour
 function About() {
   return (
     <main className='about'>
-      <Banner imageURL='/assets/imgBannerAbout.png' />
+      <Banner imageURL={imgbannerabout} />
       <div className='groupCard'>
       <ApartDetailsCard title="Fiabilité" description={descripFiabilite}/>
       <ApartDetailsCard title="Respect" description={descripRespect}/>

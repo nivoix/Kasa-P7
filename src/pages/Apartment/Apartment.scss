@@ -1,5 +1,7 @@
+@import "../../styles/variables";
+
 .ApartmentPage{
-  color: #FF6060;
+  color: $primary-color;
   margin-inline: 100px;
   margin-bottom: 60px;
 }
@@ -57,7 +59,7 @@
   justify-content: space-around;
   gap: 3%;
 }
-@media screen and (width<=768px) {
+@media screen and (width <= $screen-tablet) {
   .ApartmentPage{
     margin-inline: 20px;
   }
