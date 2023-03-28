@@ -1,26 +1,44 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Banner from '../../components/Banner'
+import Error from '../Error/Error'
+import Loader from '../../components/Loader'
 import ApartDetailsCard from '../../components/ApartDetailsCard'
 import './About.scss'
 import '../../components/ApartDetailsCard.scss'
 import imgbannerabout from '../../assets/images/imgBannerAbout.png'
 
-const descripFiabilite = "Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements, et toutes les informations sont régulièrement vérifiées par nos équipes."
-const descripRespect = "La bienveillance fait parti des valeurs fondatrices de Kasa; Tout comportement discriminatoire ou de perturbation du voisinage entrainera une exclusion de notre plateforme."
-const descripService = "Nos équipes de tiennent à votre disposition pour vous fournir une expérience parfaite. N'hésitez pas à nous contacter si vous avez la moindre question."
-const descripSecurite = "La sécurité est la priorité de Kasa. Aussi bien pour nos hôtes que pour les voyageurs, chaque logement correspond aux critères de sécurité établis par nos services. En laissant une note aussi bien à l'hôte qu'au locataire, cela permet à nos équipes de vérifier que les standards sont bien respectés. Nous organisons également des ateliers sur la sécurité domestique pour nos hôtes."
 
 function About() {
+  const [textAbouts, settextAbouts] = useState([])
+  const [nofound, setnofound] = useState(false)
+
+  useEffect(textAbout, [])
+
+  function textAbout () {
+    fetch("/textabout.json")
+    .then((res) => res.json())
+    .then((data) => {
+      data ? settextAbouts(data): setnofound(true)
+    })
+    .catch((error) => {
+      console.log(error);
+      setnofound(true)
+    })
+  }
+  if(nofound) return <Error />
   return (
-    <main className='about'>
-      <Banner imageURL={imgbannerabout} />
-      <div className='groupCard'>
-      <ApartDetailsCard title="Fiabilité" description={descripFiabilite}/>
-      <ApartDetailsCard title="Respect" description={descripRespect}/>
-      <ApartDetailsCard title="Service" description={descripService}/>
-      <ApartDetailsCard title="Sécurité" description={descripSecurite}/>
-      </div>
-    </main>
+    <>
+      {textAbouts.length < 1 && <Loader />}
+        <main className='about'>
+          <Banner imageURL={imgbannerabout} />
+          <div className='groupCard'>
+          <ApartDetailsCard title="Fiabilité" description={textAbouts.fiabilite}/>
+          <ApartDetailsCard title="Service" description={textAbouts.service}/>
+          <ApartDetailsCard title="Respect" description={textAbouts.respect}/>
+          <ApartDetailsCard title="Sécurité" description={textAbouts.securite}/>
+          </div>
+        </main>
+    </>
   )
 }
 
