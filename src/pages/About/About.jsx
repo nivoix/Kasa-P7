@@ -12,7 +12,10 @@ function About() {
   const [textAbouts, settextAbouts] = useState([])
   const [nofound, setnofound] = useState(false)
 
-  useEffect(textAbout, [])
+  useEffect(() => {
+    setTimeout(() => {textAbout()}, 2000)
+    return() => clearTimeout()
+   }, [])
 
   function textAbout () {
     fetch("/textabout.json")
