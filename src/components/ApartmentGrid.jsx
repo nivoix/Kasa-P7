@@ -8,7 +8,10 @@ function ApartmentGrid() {
   const [dataAppts, setdataAppts] = useState ([]);
   const [nofound, setnofound] = useState(false)
   
-  useEffect (dataAppt, []);
+  useEffect (() =>{
+    setTimeout(() => {dataAppt()}, 2000)
+    return() => clearTimeout()  
+  }, []);
   
   function dataAppt () {
     fetch("db.json")

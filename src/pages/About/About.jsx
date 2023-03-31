@@ -32,10 +32,7 @@ function About() {
         <main className='about'>
           <Banner imageURL={imgbannerabout} />
           <div className='groupCard'>
-          <ApartDetailsCard title="Fiabilité" description={textAbouts.fiabilite}/>
-          <ApartDetailsCard title="Service" description={textAbouts.service}/>
-          <ApartDetailsCard title="Respect" description={textAbouts.respect}/>
-          <ApartDetailsCard title="Sécurité" description={textAbouts.securite}/>
+            {textAbouts.map((infoAbout) => (<ApartDetailsCard key={infoAbout.id} title={infoAbout.title} description={infoAbout.text}/>))}
           </div>
         </main>
     </>
