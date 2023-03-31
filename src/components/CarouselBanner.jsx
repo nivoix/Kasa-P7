@@ -1,8 +1,9 @@
 import React, { useState } from 'react'
 import './CarouselBanner.scss'
-import Loader from './Loader'
+/* import Loader from './Loader' */
 import dropleft from '../assets/images/dropleft.png'
 import dropright from '../assets/images/dropright.png'
+import noPictures from '../assets/images/no_pictures.png'
 
 function CarouselBanner(props) {
   const images = props.pictures
@@ -24,7 +25,6 @@ function CarouselBanner(props) {
     setcurrentPicture(newIndex)
   }
 
-//if(!images) return <div>Loading...</div>
   return images ? (
     <div className='carouselCard'>
       <div className='carouselImage'>
@@ -40,7 +40,7 @@ function CarouselBanner(props) {
       </>
       }
     </div>
-  ) : (<Loader />)
+  ) : <img src={noPictures} alt="" className='noPictures'/>
 }
 
 export default CarouselBanner
