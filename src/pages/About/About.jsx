@@ -29,9 +29,8 @@ function About() {
     })
   }
   if(nofound) return <Error />
-  return (
+  return textAbouts.length > 1 ? (
     <>
-      {textAbouts.length < 1 && <Loader />}
         <main className='about'>
           <Banner imageURL={imgbannerabout} />
           <div className='groupCard'>
@@ -39,7 +38,7 @@ function About() {
           </div>
         </main>
     </>
-  )
+  ) : (<Loader />)
 }
 
 export default About

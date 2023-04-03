@@ -1,5 +1,19 @@
 @import "../styles/variables";
 
+.animationCard{
+ opacity :0;
+ animation: opacite 0.6s ease-in-out forwards;
+
+}
+@keyframes opacite {
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
+  }
+}
+
 .apartmentCard{
   position: relative;
   width: -webkit-fill-available;

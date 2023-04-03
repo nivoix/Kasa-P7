@@ -10,6 +10,7 @@ font-size: 18px;
 font-weight: 500;
 margin-top:180px;
 margin-bottom: 160px;
+text-align: center;
 `
 
 function Error() {
