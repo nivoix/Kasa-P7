@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 import "./Error.scss"
-import quatrecentquatre from '../../assets/images/404.png'
+import quatrecentquatre from '../../assets/images/404.svg'
 
 const StyledLink =styled(Link)`
 color: #FF6060;

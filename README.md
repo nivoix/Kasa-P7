@@ -1,6 +1,12 @@
-# Getting Started with Create React App
+# PROJET KASA OPENCLASSROOMS
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Création d'une application web de location immobilière avec Create-Reacte-App
+
+# Installation
+
+### Initialisation du projet
+
+`npm install`
 
 ## Available Scripts
 

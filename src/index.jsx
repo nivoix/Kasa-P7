@@ -7,27 +7,14 @@ import Error from './pages/Error/Error'
 import Apartment from './pages/Apartment/Apartment'
 import Layout from './app';
 
-
 const router = createBrowserRouter([
   {
     element: <Layout />,
     children:[
-      {
-        path: "/",
-        element: <Home />,
-      },
-      {
-        path:"/about",
-        element: <About />
-      },
-      {
-        path:"/apartment/:id",
-        element: <Apartment />
-      },
-      {
-        path:"*",
-        element:<Error />
-      }
+      { path: "/", element: <Home /> },
+      { path:"/about",element: <About /> },
+      { path:"/apartment/:id", element: <Apartment /> },
+      { path:"*", element:<Error /> }
     ]
   },
 ]);
